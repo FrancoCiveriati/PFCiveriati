@@ -68,26 +68,15 @@ section {
     padding: 15px;
 }
 .video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-.video-wrapper {
-    width: 80%;
-    max-width: 600px;
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
     height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
-.video-wrapper iframe {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
