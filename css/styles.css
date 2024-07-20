@@ -11,6 +11,14 @@ h1 { color: rgb(255, 255, 255);
     padding: 10px;
     text-align: center;
 }
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
 header nav ul li {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: inline-block;
