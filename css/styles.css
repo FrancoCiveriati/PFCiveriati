@@ -1,11 +1,13 @@
 /**-------------------------RESET-------------------------**/
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 /**-------------------------HEADER-------------------------**/
-h1 { color: rgb(255, 255, 255);
+h1 {
+    color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 45px;
     padding: 10px;
@@ -15,28 +17,35 @@ h1 { color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
 }
+
 .logo img {
     max-width: 120px;
     height: auto;
 }
+
 header nav ul li {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: inline-block;
     margin: 10px;
     padding: 10px;
 }
+
 li .nav-item {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 a {
     color: white;
     text-decoration: none;
     font-size: large;
 }
+
 a:hover {
     color: #a5b6ee;
     text-decoration: underline;
 }
+
+
 /**-------------------------MAIN-------------------------**/
 h2 {
     color: rgb(255, 255, 255);
@@ -44,55 +53,39 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px;
 }
-h3 {color: rgb(255, 255, 255);
+
+h3 {
+    color: rgb(255, 255, 255);
     font-size: 25px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 20px;
-    text-align: center
-}
-main section iframe {
-    padding: 20px;
-    justify-content: center;
+    text-align: center;
 }
 p {
     color: rgb(0, 0, 0);
     font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 25px;
-    text-align: justify;
     text-align: center;
-    
 }
+
 section {
     margin-bottom: 20px;
     padding: 15px;
 }
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.container{
+
+.container {
     width: 75vw;
     max-width: 1000px;
     min-width: 320px;
 }
+
 img {
     width: 100%;
     border-radius: 15px;
-    box-shadow: 0px 3px 5px rgba(15,15,15,.5);
+    box-shadow: 0px 3px 5px rgba(15, 15, 15, .5);
 }
+
 .contact-form {
     background: #fff;
     padding: 20px;
@@ -155,63 +148,145 @@ img {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
+
 .productos {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding: 20px;
     justify-content: center;
-}
-.productos {
-    width: 100%;
-    max-width: 240px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: 240px;
     height: 360px;
 }
+
 .productos img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 @media (min-width: 768px) {
     .productos {
         max-width: 220px;
     }
 }
+
 @media (min-width: 1024px) {
     .productos {
         max-width: 200px;
     }
 }
-/**-------------------------FOOTER-------------------------**/
-footer p {
-    text-align: center;
-    font-size: large;
-    color: #fff;
+
+/**-------------------------VIDEO-------------------------**/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 20px auto;
 }
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    max-width: 560px;
+    border-radius: 10px;
+}
+
+
+/**-------------------------GRID-------------------------**/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Ajusta a una altura fija para todas las tarjetas */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido se distribuya uniformemente */
+}
+
+.card-button-container {
+    text-align: center; /* Centra el botón dentro del contenedor */
+    margin-top: auto; /* Empuja el botón al fondo de la tarjeta */
+}
+
+.card-button {
+    display: inline-block;
+    background: #232a3b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
+}
+
+.card-button:hover {
+    background: #01218b;
+}
+/**-------------------------TARJETAS-------------------------**/
+.card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/**-------------------------FOOTER-------------------------**/
 footer {
-    background-color: #232a3b;
+    background: #232a3b;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
 .footer-content h3 {
     margin-bottom: 20px;
 }
+
 .redes {
     list-style: none;
     padding: 0;
@@ -220,22 +295,26 @@ footer {
     justify-content: center;
     gap: 30px;
 }
+
 .redes li {
     display: inline-block;
 }
+
 .redes a img {
     width: 40px;
     height: auto;
     transition: opacity 0.3s;
 }
+
 .redes a img:hover {
     opacity: 0.7;
-    border: none;
-    box-shadow: none;
 }
+
 .footer-bottom {
     margin-top: 20px;
 }
+
 .footer-bottom .copyright {
     margin: 0;
+    color: #fff;
 }
