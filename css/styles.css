@@ -210,9 +210,9 @@ img {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    max-width: 65%;
+    max-width: 70%;
     margin: 0 auto;
-    margin-bottom: -250px;
+    margin-bottom: -140px;
 }
 
 .video-container iframe {
