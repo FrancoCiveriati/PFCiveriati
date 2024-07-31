@@ -6,6 +6,7 @@
 }
 
 /**-------------------------HEADER-------------------------**/
+
 h1 {
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -44,8 +45,6 @@ a:hover {
     color: #a5b6ee;
     text-decoration: underline;
 }
-
-
 /**-------------------------MAIN-------------------------**/
 h2 {
     color: rgb(255, 255, 255);
@@ -225,8 +224,8 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px; /* Ajusta a una altura fija para todas las tarjetas */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    height: 400px;
+    box-sizing: border-box;
 }
 
 .card img {
@@ -240,14 +239,13 @@ img {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Asegura que el contenido se distribuya uniformemente */
+    justify-content: space-between;
 }
 
 .card-button-container {
-    text-align: center; /* Centra el botón dentro del contenedor */
-    margin-top: auto; /* Empuja el botón al fondo de la tarjeta */
+    text-align: center;
+    margin-top: auto;
 }
-
 .card-button {
     display: inline-block;
     background: #232a3b;
@@ -258,9 +256,8 @@ img {
     text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
+    text-align: center;
 }
-
 .card-button:hover {
     background: #01218b;
 }
