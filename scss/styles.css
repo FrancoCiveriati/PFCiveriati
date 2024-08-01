@@ -1,0 +1,321 @@
+/**-------------------------RESET-------------------------**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**-------------------------VARIABLES-------------------------**/
+/**-------------------------HEADER-------------------------**/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #232a3b;
+  color: #fff;
+  z-index: 1000;
+  height: 70px;
+  line-height: 70px;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  max-width: 120px;
+  height: auto;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+header nav ul li .nav-item {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+header nav ul a:hover {
+  color: #a5b6ee;
+  text-decoration: none;
+}
+
+.titulo,
+.subtitulo {
+  color: #fff;
+}
+
+.texto {
+  color: black;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 45px;
+  padding-top: 150px;
+  text-align: center;
+}
+
+.d-flex button {
+  border-color: #232a3b;
+  color: #232a3b;
+}
+.d-flex button:hover {
+  background-color: #232a3b;
+  color: #fff;
+}
+
+.navbar-nav .nav-item {
+  margin: 0;
+  padding: 5px 0;
+}
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+}
+
+/**-------------------------MAIN-------------------------**/
+main {
+  background-color: #232a3b;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 15px;
+}
+
+h3 {
+  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  color: #fff;
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 25px;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.container {
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+}
+
+.contact-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+.contact-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+.contact-form .form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+.contact-form button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #232a3b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background: #000f3d;
+}
+.contact-form button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 240px;
+  height: 360px;
+}
+.productos img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .productos {
+    max-width: 220px;
+  }
+}
+@media (min-width: 1024px) {
+  .productos {
+    max-width: 200px;
+  }
+}
+.texto-contacto {
+  margin: 15px;
+}
+
+/**-------------------------VIDEO-------------------------**/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: -140px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/**-------------------------GRID-------------------------**/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  box-sizing: border-box;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+.card .card-content {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card-button-container {
+  text-align: center;
+  margin-top: auto;
+}
+.card .card-button-container .card-button {
+  display: inline-block;
+  background: #232a3b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.card .card-button-container .card-button:hover {
+  background: #000f3d;
+}
+
+/**-------------------------FOOTER-------------------------**/
+footer {
+  background: #232a3b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+footer .footer-content {
+  margin-bottom: 20px;
+}
+footer .footer-content .redes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+footer .footer-content .redes li {
+  display: inline-block;
+}
+footer .footer-content .redes li a img {
+  width: 40px;
+  height: auto;
+  transition: opacity 0.3s;
+}
+footer .footer-content .redes li a img:hover {
+  opacity: 0.7;
+}
+footer .footer-bottom {
+  margin-top: 20px;
+}
+footer .footer-bottom .copyright {
+  margin: 0;
+  color: #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */

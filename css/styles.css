@@ -65,11 +65,11 @@ a:hover {
     color: white;
 }
 .navbar-nav .nav-item {
-    margin: 0; /* Elimina cualquier margen adicional */
-    padding: 5px 0; /* Ajusta el espaciado entre elementos */
+    margin: 0;
+    padding: 5px 0;
 }
 .navbar-nav .nav-link {
-    padding: 10px 15px; /* Ajusta el padding para reducir el espacio vertical */
+    padding: 10px 15px;
 }
 /**-------------------------MAIN-------------------------**/
 main{
