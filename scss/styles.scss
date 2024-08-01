@@ -278,16 +278,15 @@ img {
     font-family: $font-family-secondary;
 }
 .container-news {
-    padding: 100px;
+    padding: 10px;
     
     .title {
-      font-size: 2rem;
-      margin-bottom: 50px;
-      margin-top: -60px;
-      text-align: center;
-      color: $text-color;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    margin-top: -60px;
+    text-align: center;
+    color: $text-color;
     }
-  
     .news {
       background-color: $background-color;
       border: 1px solid $border-color;
