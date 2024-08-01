@@ -71,17 +71,26 @@ h1 {
   color: #fff;
 }
 
-.navbar-nav .nav-item {
-  margin: 0;
-  padding: 5px 0;
-}
-.navbar-nav .nav-link {
-  padding: 10px 15px;
-}
-
 /**-------------------------MAIN-------------------------**/
 main {
   background-color: #232a3b;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.video-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
 }
 
 h2 {
@@ -244,10 +253,11 @@ img {
 .paragraph {
   text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: x-large;
 }
 
 .container-news {
-  padding: 10px;
+  padding: 65px;
 }
 .container-news .title {
   font-size: 2rem;
@@ -266,8 +276,10 @@ img {
 }
 .container-news .news .news-image {
   margin-bottom: 15px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   max-width: 900px;
+  margin: 65px auto;
 }
 .container-news .news .news-image img {
   max-width: 100%;
@@ -275,24 +287,40 @@ img {
   border-radius: 8px;
 }
 .container-news .news .video-container {
-  margin-bottom: 15px;
-}
-.container-news .news .video-container iframe {
+  position: relative;
   width: 100%;
-  height: 315px;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 15px;
   border-radius: 8px;
 }
-.container-news .news .subtittle {
+.container-news .news .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+}
+.container-news .news .parrafo {
+  color: #232a3b;
+  line-height: 1.5;
+}
+
+.subtittle {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #fff;
 }
-.container-news .news .parrafo {
-  font-size: 1rem;
+
+.paragraph {
+  font-size: large;
   line-height: 1.6;
 }
 
-/**-------------------------RESEÑAS-------------------------**/
+/**-------------------------TIENDA-------------------------**/
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -348,6 +376,41 @@ img {
 }
 .card-button:hover {
   background-color: #000f3d;
+}
+
+/**-----------------------RESEÑAS----------------------**/
+.review-card {
+  margin-bottom: 40px;
+}
+.review-card .subtitulo {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #232a3b;
+}
+.review-card .card-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.review-card .card-container .card-img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+.review-card .card-container .card-content p {
+  font-size: large;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.review-title {
+  color: #fff;
 }
 
 /**-------------------------GRID-------------------------**/

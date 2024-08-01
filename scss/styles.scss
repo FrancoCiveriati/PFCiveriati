@@ -96,23 +96,27 @@ h1 {
         }
     }
 }
-
-.navbar-nav {
-    .nav-item {
-        margin: 0;
-        padding: 5px 0;
-    }
-
-    .nav-link {
-        padding: 10px 15px;
-    }
-}
-
 /**-------------------------MAIN-------------------------**/
 main {
     background-color: $primary-color;
 }
-
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    background-color: $card-bg-color;
+    border-radius: 8px;
+    box-shadow: $card-shadow;
+    padding: 10px;
+  
+    iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 8px;
+    }
+  }
 h2 {
     text-align: center;
     font-family: $font-family-primary;
@@ -276,17 +280,19 @@ img {
 .paragraph{
     text-align: center;
     font-family: $font-family-secondary;
+    font-size: x-large;
 }
 .container-news {
-    padding: 10px;
-    
+    padding: 65px;
+  
     .title {
-    font-size: 2rem;
-    margin-bottom: 50px;
-    margin-top: -60px;
-    text-align: center;
-    color: $text-color;
+      font-size: 2rem;
+      margin-bottom: 50px;
+      margin-top: -60px;
+      text-align: center;
+      color: $text-color;
     }
+  
     .news {
       background-color: $background-color;
       border: 1px solid $border-color;
@@ -294,11 +300,13 @@ img {
       box-shadow: 0 4px 8px $shadow-color;
       margin-bottom: 20px;
       padding: 15px;
-      
+  
       .news-image {
         margin-bottom: 15px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         max-width: 900px;
+        margin: 65px auto;
   
         img {
           max-width: 100%;
@@ -308,28 +316,43 @@ img {
       }
   
       .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
         margin-bottom: 15px;
+        border-radius: 8px;
         iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
-          height: 315px;
+          height: 100%;
           border-radius: 8px;
+          border: none;
         }
       }
   
+      .parrafo {
+        color: $primary-color;
+        line-height: 1.5;
+      }
+    }
+  }
+
       .subtittle {
         font-size: 1.5rem;
         margin-bottom: 10px;
         color: $text-color;
       }
   
-      .parrafo {
-        font-size: 1rem;
+      .paragraph {
+        font-size: large;
         line-height: 1.6;
       }
-    }
-  }
   
-/**-------------------------RESEÑAS-------------------------**/
+/**-------------------------TIENDA-------------------------**/
 
 .product-grid {
     display: grid;
@@ -389,6 +412,45 @@ img {
       background-color: $button-hover-color;
     }
   }
+  /**-----------------------RESEÑAS----------------------**/
+  .review-card {
+    margin-bottom: 40px;
+    
+    .subtitulo {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: $primary-color;
+    }
+    
+    .card-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid $card-border-color;
+        background-color: $background-color;
+        border-radius: 8px;
+        box-shadow: $card-shadow;
+        padding: 20px;
+        margin-bottom: 20px;
+        
+        .card-img {
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .card-content {
+            p {
+                font-size: large;
+                line-height: 1.5;
+                margin: 0;
+            }
+        }
+    }
+}
+.review-title{
+    color: $text-color;
+}
 /**-------------------------GRID-------------------------**/
 .grid-container {
     display: grid;
