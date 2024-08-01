@@ -15,6 +15,11 @@ $border-color: #ccc;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $font-family-primary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 $font-family-secondary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$button-color: #232a3b;
+$button-hover-color: #000f3d;
+$card-bg-color: #fff;
+$card-border-color: #ccc;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 /**-------------------------HEADER-------------------------**/
 header {
@@ -22,7 +27,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: $primary-color;
+    background: $background-color;
     color: $text-color;
     z-index: 1000;
     height: 70px;
@@ -60,12 +65,15 @@ header {
         }
     }
 }
-
-.titulo,
 .subtitulo {
     color: $text-color;
+    ;
 }
-
+.titulo{
+    color: $text-color;
+    margin-bottom: 50px;
+    text-align: center;
+}
 .texto {
     color: black;
 }
@@ -117,15 +125,16 @@ h3 {
     padding: 20px;
     text-align: center;
 }
-
-p {
+.parrafo {
+    text-align: justify;
     color: $text-color;
-    font-size: 22px;
-    font-family: $font-family-secondary;
-    padding-top: 25px;
-    text-align: center;
 }
 
+.texto2{
+    color: $text-color;
+    text-align: center;
+    font-size: large;
+}
 section {
     margin-bottom: 20px;
     padding: 15px;
@@ -205,66 +214,182 @@ img {
         }
     }
 }
-
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px;
-    justify-content: center;
-    background-color: white;
-    border: 1px solid $border-color;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px $shadow-color;
-    width: 100%;
-    max-width: 240px;
-    height: 360px;
-
     img {
         width: 100%;
         height: auto;
         display: block;
     }
-}
-
-@media (min-width: 768px) {
-    .productos {
-        max-width: 220px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .productos {
-        max-width: 200px;
-    }
-}
 
 .texto-contacto {
     margin: 15px;
+    color: $text-color;
+    font-size: large;
+    text-align: center;
 }
-
-/**-------------------------VIDEO-------------------------**/
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
+.card {
+    background-color: $card-bg-color;
+    border: 1px solid $card-border-color;
+    border-radius: 10px;
     overflow: hidden;
-    max-width: 70%;
-    margin: 0 auto;
-    margin-bottom: -140px;
-
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 65%;
-        border: 0;
-        border-radius: 10px;
-    }
+    box-shadow: $card-shadow;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px;
+    max-width: 600px;
+    max-height: 3500px;
 }
 
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 10px 0;
+}
+.card-button {
+    background-color: $button-color;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.card-button:hover {
+    background-color: $button-hover-color;
+}
+
+/**-------------------------NOTICIAS-------------------------**/
+.paragraph{
+    text-align: center;
+    font-family: $font-family-secondary;
+}
+.container-news {
+    padding: 100px;
+    
+    .title {
+      font-size: 2rem;
+      margin-bottom: 50px;
+      margin-top: -60px;
+      text-align: center;
+      color: $text-color;
+    }
+  
+    .news {
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px $shadow-color;
+      margin-bottom: 20px;
+      padding: 15px;
+      
+      .news-image {
+        margin-bottom: 15px;
+        text-align: center;
+        max-width: 900px;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+      }
+  
+      .video-container {
+        margin-bottom: 15px;
+        iframe {
+          width: 100%;
+          height: 315px;
+          border-radius: 8px;
+        }
+      }
+  
+      .subtittle {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: $text-color;
+      }
+  
+      .parrafo {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+/**-------------------------RESEÑAS-------------------------**/
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card-product {
+    background-color: $card-bg-color;
+    border: 1px solid $card-border-color;
+    box-shadow: $card-shadow;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+  
+  .card-price {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: $secondary-color;
+  }
+  
+  .card-button {
+    background-color: $button-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
 /**-------------------------GRID-------------------------**/
 .grid-container {
     display: grid;
@@ -324,7 +449,6 @@ img {
         }
     }
 }
-
 /**-------------------------FOOTER-------------------------**/
 footer {
     background: $primary-color;
