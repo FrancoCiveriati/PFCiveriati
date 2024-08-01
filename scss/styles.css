@@ -289,7 +289,7 @@ img {
 .container-news .news .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   overflow: hidden;
   margin-bottom: 15px;
@@ -392,7 +392,7 @@ img {
   align-items: center;
   gap: 20px;
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -402,6 +402,7 @@ img {
   max-width: 400px;
   height: auto;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 .review-card .card-container .card-content p {
   font-size: large;
@@ -409,6 +410,28 @@ img {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .review-card .card-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  .review-card .card-img {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .review-card .card-content p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .review-card .card-container {
+    padding: 10px;
+  }
+  .review-card .card-content p {
+    font-size: 1rem;
+  }
+}
 .review-title {
   color: #fff;
 }

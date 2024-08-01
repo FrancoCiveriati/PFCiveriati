@@ -318,7 +318,7 @@ img {
       .video-container {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        padding-bottom: 56.25%; /* 16:9 */
         height: 0;
         overflow: hidden;
         margin-bottom: 15px;
@@ -417,37 +417,74 @@ img {
     margin-bottom: 40px;
     
     .subtitulo {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: $primary-color;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: $primary-color;
     }
     
     .card-container {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        border: 1px solid $card-border-color;
-        background-color: $background-color;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border: 1px solid $card-border-color;
+      background-color: $card-bg-color;
+      border-radius: 8px;
+      box-shadow: $card-shadow;
+      padding: 20px;
+      margin-bottom: 20px;
+      
+      .card-img {
+        max-width: 400px;
+        height: auto;
         border-radius: 8px;
-        box-shadow: $card-shadow;
-        padding: 20px;
-        margin-bottom: 20px;
-        
-        .card-img {
-            max-width: 400px;
-            height: auto;
-            border-radius: 8px;
+        flex-shrink: 0;
+      }
+      
+      .card-content {
+        p {
+          font-size: large;
+          line-height: 1.5;
+          margin: 0;
         }
-        
-        .card-content {
-            p {
-                font-size: large;
-                line-height: 1.5;
-                margin: 0;
-            }
-        }
+      }
     }
-}
+  }
+  
+  // Responsive Styles
+  @media (max-width: 768px) {
+    .review-card {
+      .card-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+      
+      .card-img {
+        max-width: 100%;
+        margin-bottom: 15px;
+      }
+      
+      .card-content {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .review-card {
+      .card-container {
+        padding: 10px;
+      }
+      
+      .card-content {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 .review-title{
     color: $text-color;
 }
