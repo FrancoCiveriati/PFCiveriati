@@ -323,34 +323,37 @@ img {
 /**-------------------------TIENDA-------------------------**/
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.card-product {
+.card {
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-}
-.card-product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
 }
 
-.card-content {
-  padding: 15px;
+.card-body {
+  padding: 20px;
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-title {
@@ -373,7 +376,10 @@ img {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-self: center;
+  margin-top: auto;
 }
+
 .card-button:hover {
   background-color: #000f3d;
 }

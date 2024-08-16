@@ -353,65 +353,70 @@ img {
       }
   
 /**-------------------------TIENDA-------------------------**/
-
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .card-product {
-    background-color: $card-bg-color;
-    border: 1px solid $card-border-color;
-    box-shadow: $card-shadow;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-  }
-  
-  .card-img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .card-content {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: $primary-color;
-  }
-  
-  .card-price {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: $secondary-color;
-  }
-  
-  .card-button {
-    background-color: $button-color;
-    color: $text-color;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  
-    &:hover {
-      background-color: $button-hover-color;
-    }
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: $card-bg-color;
+  border: 1px solid $card-border-color;
+  box-shadow: $card-shadow;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.card-img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: $primary-color;
+}
+
+.card-price {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: $secondary-color;
+}
+
+.card-button {
+  background-color: $button-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+  margin-top: auto;
+}
+
+.card-button:hover {
+  background-color: $button-hover-color;
+}
+
+
   /**-----------------------RESEÑAS----------------------**/
   .review-card {
     margin-bottom: 40px;
@@ -449,8 +454,6 @@ img {
       }
     }
   }
-  
-  // Responsive Styles
   @media (max-width: 768px) {
     .review-card {
       .card-container {
