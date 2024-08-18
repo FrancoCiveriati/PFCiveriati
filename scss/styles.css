@@ -339,6 +339,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .card-img {
@@ -350,9 +351,9 @@ img {
 .card-body {
   padding: 20px;
   text-align: center;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: space-between;
 }
 
@@ -360,12 +361,14 @@ img {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: #232a3b;
+  flex-shrink: 0;
 }
 
 .card-price {
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin: 10px 0;
   color: #000f3d;
+  flex-shrink: 0;
 }
 
 .card-button {
