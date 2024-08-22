@@ -243,6 +243,10 @@ img {
     height: 360px;
     max-width: 600px;
     max-height: 3500px;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .card-img {
@@ -372,6 +376,10 @@ img {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 }
 
 .card-img {
@@ -421,6 +429,7 @@ img {
   /**-----------------------RESEÑAS----------------------**/
   .review-card {
     margin-bottom: 40px;
+    
     
     .subtitulo {
       font-size: 1.5rem;
@@ -547,6 +556,7 @@ img {
 
             &:hover {
                 background: $secondary-color;
+                
             }
         }
     }
